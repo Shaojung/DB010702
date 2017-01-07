@@ -4,12 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    Spinner spinner;
+    Spinner spinner, spinner2;
     TextView tv, tv2;
+    String[] fruits = {"蘋果","橘子", "柳丁", "香蕉"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                                android.R.layout.simple_spinner_item,
+                                fruits);
+        spinner2.setAdapter(adapter);
+
+
+
     }
     public void click1(View v)
     {
