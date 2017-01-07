@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                tv.setText(String.valueOf(position));
+                // tv.setText(String.valueOf(position));
+                TextView tv2 = (TextView) view;
+                tv.setText(tv2.getText());
             }
 
             @Override
