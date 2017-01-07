@@ -21,8 +21,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // tv.setText(String.valueOf(position));
-                TextView tv2 = (TextView) view;
-                tv.setText(tv2.getText());
+
+                // TextView tv2 = (TextView) view;
+                // tv.setText(tv2.getText());
+
+                String data[] = getResources().getStringArray(R.array.cities);
+                tv.setText(data[position]);
             }
 
             @Override
